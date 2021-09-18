@@ -1,0 +1,30 @@
+<table align="center">
+    <tr>
+        <th>{% include 'title.html' %}</th>
+    </tr>
+    <tr>
+        <th>
+            <table align="center" border="2">
+                <tr>
+                    <th>Bid</th>
+                    <th>Amt</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>BidP</th>
+                    <th>countpbid</th>
+                </tr>
+                {% for x in data %}
+                    <tr>
+                    <th>{{ x.bid }}</th>
+                    <th>{{ x.amount }}</th>
+                    <th>{{ x.date }}</th>
+                    <th>{{ x.time }}</th>
+                    <th>{{ x.uid_id }}</th>
+                    <th>count</th>
+                    </tr>
+                {% endfor %}
+                
+            </table>
+        </th>
+    </tr>
+</table>

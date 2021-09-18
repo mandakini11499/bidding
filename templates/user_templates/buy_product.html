@@ -1,0 +1,28 @@
+
+<table align="center">
+    <tr><th>{% include 'title.html' %}</th></tr>
+    <tr><th>{% include 'user_templates/user_menu.html' %}</th></tr>
+</table>
+
+
+<table align="center" border="2">
+                     <tr>
+                         <th>PNO</th>
+                         <th>PNAME</th>
+                         <th>PINFO</th>
+                         <th>PIMAGE</th>
+                         <th>PPRICE</th>
+                         <th>STATUS</th>
+
+                     </tr>
+                    {% for x in data %}
+                        <tr>
+                            <th><a href="{% url 'bdata' %}">{{ x.pno }}</a></th>
+                        <th>{{ x.pname }}</th>
+                        <th>{{ x.pinfo }}</th>
+                        <th><img src="{{ x.image.url }}" width="30" height="50"></th>
+                        <th>{{ x.bprice }}</th>
+                        <th>{{ x.status }}</th>
+                        </tr>
+                    {% endfor %}
+                </table>
